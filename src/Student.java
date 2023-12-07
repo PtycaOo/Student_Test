@@ -1,2 +1,41 @@
-package PACKAGE_NAME;public class Student {
+public class Student implements Comparable<Student>{
+    int id;
+    private String name;
+    private int age;
+
+    public Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public int getAge() {
+        return age;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return name.compareTo(o.getName());
+    }
+
+
 }
